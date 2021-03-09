@@ -3,6 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: trial-nodejs
+  namespace: production
 spec:
   type: NodePort
   selector:
@@ -10,7 +11,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      nodePort: 30901
+      nodePort: 30902
       port: 80
       targetPort: 8080
 ---
@@ -18,11 +19,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: trial-nodejs
+  namespace: production
 spec:
   revisionHistoryLimit: 5
   strategy:
     type: RollingUpdate
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: trial-nodejs
@@ -33,7 +35,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: doandk/trial-nodejs:SHORT-COMMIT-HASH
+        image: doandk/trial-nodejs:EXECUTION-TAG
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
