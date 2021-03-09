@@ -10,7 +10,7 @@ var os = require('os');
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('This is Prod');
+  res.send('This is Production');
   os.platform();
   os.release();
 });
