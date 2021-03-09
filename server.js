@@ -14,6 +14,8 @@ os.release(); //'10.8.0'
 const app = express();
 app.get('/', (req, res) => {
   res.send('Hello World');
+  res.send('Xendit - Trial - Doan Sinaga - 09-03-2021 - <current_date>
+');
 });
 
 app.listen(PORT, HOST);
