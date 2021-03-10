@@ -16,7 +16,7 @@ const logger = myLoggers.getLogger("default");
 const register = new client.Registry()
 
 register.setDefaultLabels({
-  app: 'Doan DK'
+  app: 'trial-js-prod'
 })
 
 client.collectDefaultMetrics({ register })
