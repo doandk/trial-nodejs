@@ -76,10 +76,10 @@ let month = date_ob.getMonth() + 1;
 let year = date_ob.getFullYear();
 
 const firstPage = async (req, res) => {
-    res.write("Xendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year +
-   "\n\n OS Platform : " +os.platform+ " \n OS Release : " +os.release +
-   "\n\n CPU Usage : " + mycpu + "%");
-   res.end();
+    res.write("\n OS Platform : " +os.platform+ " \n OS Release : " +os.release +
+    "\n Xendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year +
+    "\n CPU Usage : " + mycpu + "%");
+    res.end();
 }
 
 const server = http.createServer(async (req, res) => {
