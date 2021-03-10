@@ -21,10 +21,10 @@ metadata:
   name: trial-nodejs
   namespace: production
 spec:
-  revisionHistoryLimit: 5
+  revisionHistoryLimit: 10
   strategy:
     type: RollingUpdate
-  replicas: 4
+  replicas: 5
   selector:
     matchLabels:
       app: trial-nodejs
@@ -40,3 +40,10 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "0.1"
+          limits:
+            memory: "128Mi"
+            cpu: "0.2"
