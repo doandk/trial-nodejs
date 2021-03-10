@@ -1,13 +1,24 @@
 {
-  "name": "docker_web_app",
+  "name": "trial-nodejs-dev",
   "version": "1.0.0",
-  "description": "Node.js on Docker",
-  "author": "doandk",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "prometheus",
+    "node.js",
+    "monitoring",
+    "grafana",
+    "metrics"
+  ],
+  "author": "Doan Pratama Sinaga",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.16.1"
+    "log4js": "^6.3.0",
+    "node-os-utils": "^1.3.5",
+    "os": "^0.1.1",
+    "prom-client": "^12.0.0"
   }
 }
