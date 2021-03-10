@@ -24,7 +24,7 @@ spec:
   revisionHistoryLimit: 10
   strategy:
     type: RollingUpdate
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: trial-nodejs
@@ -37,7 +37,6 @@ spec:
       - name: nginx
         image: doandk/trial-nodejs:EXECUTION-TAG
         imagePullPolicy: Always
-        args: [/bin/sh, -c, 'tail -f /usr/src/app/trial-js.log']
         ports:
         - containerPort: 8080
           protocol: TCP
