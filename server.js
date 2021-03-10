@@ -76,7 +76,7 @@ let month = date_ob.getMonth() + 1;
 let year = date_ob.getFullYear();
 
 const firstPage = async (req, res) => {
-   res.write("\n app-dev : \n OS Platform : " +os.platform+ " \n OS Release : " + os.release);
+   res.write("\n app-dev: \n OS Platform : " +os.platform+ " \n OS Release : " + os.release);
    res.end();
 }
 
