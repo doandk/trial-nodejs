@@ -78,7 +78,7 @@ let year = date_ob.getFullYear();
 const firstPage = async (req, res) => {
     res.write("\n OS Platform : " +os.platform+ " \n OS Release : " +os.release +
     "\n Xendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year +
-    "\n CPU Usage : " + mycpu + "%");
+    "\n CPU Usage :" + mycpu + "%");
     res.end();
 }
 
