@@ -3,6 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: trial-nodejs
+  namespace: sit
 spec:
   type: NodePort
   selector:
@@ -18,6 +19,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: trial-nodejs
+  namespace: sit
 spec:
   revisionHistoryLimit: 5
   strategy:
