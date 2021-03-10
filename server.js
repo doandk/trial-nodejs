@@ -16,7 +16,7 @@ const logger = myLoggers.getLogger("default");
 const register = new client.Registry()
 
 register.setDefaultLabels({
-  app: 'Doan DK'
+  app: 'trial-sit'
 })
 
 client.collectDefaultMetrics({ register })
@@ -76,7 +76,7 @@ let month = date_ob.getMonth() + 1;
 let year = date_ob.getFullYear();
 
 const firstPage = async (req, res) => {
-    res.write("Xendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year);
+   res.write("\n app-sit : \nXendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year);
    res.end();
 }
 
