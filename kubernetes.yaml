@@ -10,7 +10,7 @@ spec:
   ports:
     - name: http
       protocol: TCP
-      nodePort: 30901
+      nodePort: 30900
       port: 80
       targetPort: 8080
 ---
