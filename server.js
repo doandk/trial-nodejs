@@ -61,6 +61,7 @@ let demoLogger = async(req, res) => { //middleware function
   const durationInMilliseconds = getActualRequestDurationInMilliseconds(start);
   let log = `[${formatted_date}] ${method}:${url} ${status} ${durationInMilliseconds.toLocaleString()} ms`;
   logger.info(log);
+  console.log(log);
 };
 
 let mycpu;
@@ -74,6 +75,10 @@ let date_ob = new Date(ts);
 let date = date_ob.getDate();
 let month = date_ob.getMonth() + 1;
 let year = date_ob.getFullYear();
+const arr = [1, 2, 3, 4, 5, 6, 9, 7, 8, 9, 10];
+arr.reverse();
+const used = process.memoryUsage().heapUsed / 1024 / 1024;
+const memoryUsage = Math.round(used * 100) / 100;
 
 const firstPage = async (req, res) => {
    res.write("\n app-dev: \n OS Platform : " +os.platform+ " \n OS Release : " + os.release);
