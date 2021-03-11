@@ -61,6 +61,7 @@ let demoLogger = async(req, res) => { //middleware function
   const durationInMilliseconds = getActualRequestDurationInMilliseconds(start);
   let log = `[${formatted_date}] ${method}:${url} ${status} ${durationInMilliseconds.toLocaleString()} ms`;
   logger.info(log);
+  console.log(log);
 };
 
 let mycpu;
