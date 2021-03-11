@@ -37,8 +37,6 @@ spec:
       - name: nginx
         image: doandk/trial-nodejs:EXECUTION-TAG
         imagePullPolicy: Always
-        command: ["/bin/sh"]
-        args: ["-c", "node server.js && tail trial-js.log"]
         ports:
         - containerPort: 8080
           protocol: TCP
