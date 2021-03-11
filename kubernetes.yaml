@@ -24,7 +24,7 @@ spec:
   revisionHistoryLimit: 10
   strategy:
     type: RollingUpdate
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: trial-nodejs
