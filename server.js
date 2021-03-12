@@ -81,7 +81,7 @@ const used = process.memoryUsage().heapUsed / 1024 / 1024;
 const memoryUsage = Math.round(used * 100) / 100;
 
 const firstPage = async (req, res) => {
-    res.write("\n prod-app : \n OS Platform : " +os.platform+ " \n OS Release : " +os.release +
+    res.write("\n prod-app-trial-demo : \n OS Platform : " +os.platform+ " \n OS Release : " +os.release +
     "\n Xendit - Trial - Doan Sinaga - 9-3-2021"+ " - " +date + "-" + month + "-" + year +
     "\n CPU Usage :" + mycpu + "%" + "\n Memory Usage :" + memoryUsage + " MB");
     res.end();
